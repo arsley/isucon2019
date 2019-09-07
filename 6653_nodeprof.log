@@ -1,0 +1,1254 @@
+Statistical profiling result from isolate-0x2c85af0-4278-v8.log, (33070 ticks, 80 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  10787   32.6%          /home/isucon/local/node/bin/node
+    343    1.0%          /lib/x86_64-linux-gnu/libc-2.27.so
+     34    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+     14    0.0%          [vdso]
+      7    0.0%          /lib/x86_64-linux-gnu/libm-2.27.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    301    0.9%    1.4%  LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+    250    0.8%    1.1%  LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    115    0.3%    0.5%  LazyCompile: *getTextParser /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/text_parser.js:199:23
+    108    0.3%    0.5%  LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+    103    0.3%    0.5%  LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+     88    0.3%    0.4%  LazyCompile: *readableAddChunk _stream_readable.js:228:26
+     86    0.3%    0.4%  LazyCompile: *onwrite _stream_writable.js:456:17
+     72    0.2%    0.3%  LazyCompile: *TextRow :4:26
+     71    0.2%    0.3%  LazyCompile: *readLengthCodedNumber /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:183:24
+     65    0.2%    0.3%  LazyCompile: *createQuery /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:842:21
+     60    0.2%    0.3%  LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+     59    0.2%    0.3%  LazyCompile: *slice buffer.js:1056:40
+     59    0.2%    0.3%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     55    0.2%    0.3%  LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+     49    0.1%    0.2%  LazyCompile: *toString buffer.js:690:46
+     46    0.1%    0.2%  LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+     44    0.1%    0.2%  LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+     43    0.1%    0.2%  LazyCompile: *exports.encode /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/string.js:18:26
+     43    0.1%    0.2%  LazyCompile: *emit events.js:159:44
+     42    0.1%    0.2%  LazyCompile: *resultsetHeader /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:103:18
+     42    0.1%    0.2%  LazyCompile: *Socket._write net.js:709:35
+     42    0.1%    0.2%  LazyCompile: *Readable.read _stream_readable.js:396:35
+     40    0.1%    0.2%  LazyCompile: *onStreamRead internal/stream_base_commons.js:155:22
+     39    0.1%    0.2%  LazyCompile: *_copy buffer.js:170:15
+     29    0.1%    0.1%  LazyCompile: *stringSlice buffer.js:636:21
+     29    0.1%    0.1%  LazyCompile: *doWrite _stream_writable.js:418:17
+     29    0.1%    0.1%  LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+     28    0.1%    0.1%  LazyCompile: *ResultSetHeader /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/resultset_header.js:13:14
+     26    0.1%    0.1%  LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     25    0.1%    0.1%  LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+     23    0.1%    0.1%  LazyCompile: *normalizeEncoding internal/util.js:103:27
+     23    0.1%    0.1%  LazyCompile: *Socket._read net.js:518:34
+     21    0.1%    0.1%  LazyCompile: *readLengthCodedString /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:354:24
+     18    0.1%    0.1%  RegExp: \?+
+     17    0.1%    0.1%  LazyCompile: *get internal/bootstrap/pre_execution.js:283:8
+     16    0.0%    0.1%  LazyCompile: *writeU_Int16LE internal/buffer.js:706:24
+     16    0.0%    0.1%  LazyCompile: *write buffer.js:952:40
+     16    0.0%    0.1%  LazyCompile: *getDefaultTriggerAsyncId internal/async_hooks.js:278:34
+     16    0.0%    0.1%  LazyCompile: *_resetSequenceId /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:234:19
+     14    0.0%    0.1%  RegExp: ^v[0-5]\.
+     14    0.0%    0.1%  LazyCompile: *query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+     14    0.0%    0.1%  LazyCompile: *nextTick internal/process/task_queues.js:109:18
+     13    0.0%    0.1%  LazyCompile: *parseDateTime /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:596:16
+     13    0.0%    0.1%  LazyCompile: *fieldsEOF /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:211:12
+     13    0.0%    0.1%  LazyCompile: *adjustOffset buffer.js:1039:22
+     12    0.0%    0.1%  LazyCompile: *get _stream_duplex.js:141:6
+     12    0.0%    0.1%  LazyCompile: *byteLength buffer.js:556:20
+     12    0.0%    0.1%  LazyCompile: *_resolveNamedPlaceholders /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:512:28
+     11    0.0%    0.1%  LazyCompile: *TickObject internal/process/task_queues.js:92:14
+     10    0.0%    0.0%  LazyCompile: *slowCases internal/util.js:108:19
+     10    0.0%    0.0%  LazyCompile: *readInt16 /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:92:12
+     10    0.0%    0.0%  LazyCompile: *processPromiseRejections internal/process/promises.js:163:34
+      9    0.0%    0.0%  LazyCompile: *shift /home/isucon/isucari/webapp/nodejs/node_modules/denque/index.js:116:40
+      9    0.0%    0.0%  LazyCompile: *find /home/isucon/isucari/webapp/nodejs/node_modules/find-my-way/index.js:342:39
+      9    0.0%    0.0%  LazyCompile: *afterWrite _stream_writable.js:490:20
+      9    0.0%    0.0%  LazyCompile: *Readable.on _stream_readable.js:862:33
+      8    0.0%    0.0%  LazyCompile: *Socket._writeGeneric net.js:672:42
+      7    0.0%    0.0%  LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      7    0.0%    0.0%  LazyCompile: *exports.decode /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/string.js:5:26
+      6    0.0%    0.0%  LazyCompile: *writeInt8 /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:707:12
+      6    0.0%    0.0%  LazyCompile: *maybeReadMore_ _stream_readable.js:601:24
+      6    0.0%    0.0%  LazyCompile: *Socket net.js:236:16
+      5    0.0%    0.0%  LazyCompile: *parse url.js:154:37
+      5    0.0%    0.0%  LazyCompile: *emitReadable_ _stream_readable.js:566:23
+      5    0.0%    0.0%  LazyCompile: *_storeHeader _http_outgoing.js:306:22
+      5    0.0%    0.0%  LazyCompile: *Writable.write _stream_writable.js:275:36
+      5    0.0%    0.0%  LazyCompile: *Socket._destroy net.js:566:37
+      4    0.0%    0.0%  RegExp: ; *
+      4    0.0%    0.0%  LazyCompile: *parserOnHeadersComplete _http_common.js:70:33
+      4    0.0%    0.0%  LazyCompile: *insert internal/timers.js:305:16
+      4    0.0%    0.0%  LazyCompile: *get net.js:1584:6
+      4    0.0%    0.0%  LazyCompile: *connectionListenerInternal _http_server.js:362:36
+      4    0.0%    0.0%  LazyCompile: *Writable.uncork _stream_writable.js:312:37
+      4    0.0%    0.0%  LazyCompile: *UTF8Decoder.decode /home/isucon/isucari/webapp/nodejs/node_modules/busboy/deps/encoding/encoding.js:1038:25
+      4    0.0%    0.0%  LazyCompile: *Readable.resume _stream_readable.js:946:37
+      4    0.0%    0.0%  LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      3    0.0%    0.0%  RegExp: [A-Za-z0-9\/+]
+      3    0.0%    0.0%  LazyCompile: *routeHandler /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/route.js:270:25
+      3    0.0%    0.0%  LazyCompile: *parseLengthCodedIntNoBigCheck /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:644:32
+      3    0.0%    0.0%  LazyCompile: *onconnection net.js:1444:22
+      3    0.0%    0.0%  LazyCompile: *format url.js:572:39
+      3    0.0%    0.0%  LazyCompile: *decode /home/isucon/isucari/webapp/nodejs/node_modules/busboy/deps/encoding/encoding.js:897:26
+      3    0.0%    0.0%  LazyCompile: *clearIncoming _http_server.js:617:23
+      3    0.0%    0.0%  LazyCompile: *Readable.removeListener _stream_readable.js:892:45
+      2    0.0%    0.0%  RegExp: ^[a-z0-9.+-]+:
+      2    0.0%    0.0%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      2    0.0%    0.0%  RegExp: ^((?:(?:[0-9a-fA-F]{1,4}):){7}(?:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){6}(?:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){5}(?::((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,2}|:)|(?:(?:[0-9a-fA-F]{1,4}):){4}(?:(:(?:[0-9a-fA-F]{1,4})){0,1}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,3}|:)|(?:(?:[0-9a-fA-F]{1,4}):){3}(?:(:(?:[0-9a-fA-F]{1,4})){0,2}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,4}|:)|(?:(?:[0-9a-fA-F]{1,4}):){2}(?:(:(?:[0-9a-fA-F]{1,4})){0,3}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,5}|:)|(?:(?:[0-9a-fA-F]{1,4}):){1}(?:(:(?:[0-9a-fA-F]{1,4})){0,4}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,6}|:)|(?::((?::(?:[0-9a-fA-F]{1,4})){0,5}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(?::(?:[0-9a-fA-F]{1,4})){1,7}|:)))(%[0-9a-zA-Z]{1,})?$
+      2    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      2    0.0%    0.0%  RegExp: ; * {1}
+      2    0.0%    0.0%  RegExp: (?:^|\W)chunked(?:$|\W)
+      2    0.0%    0.0%  LazyCompile: *setLevel /home/isucon/isucari/webapp/nodejs/node_modules/pino/lib/levels.js:63:19
+      2    0.0%    0.0%  LazyCompile: *remove internal/linkedlist.js:15:16
+      2    0.0%    0.0%  LazyCompile: *push /home/isucon/isucari/webapp/nodejs/node_modules/denque/index.js:130:38
+      2    0.0%    0.0%  LazyCompile: *normalizeString path.js:52:25
+      2    0.0%    0.0%  LazyCompile: *merge /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/utils.js:251:15
+      2    0.0%    0.0%  LazyCompile: *isEncoding buffer.js:494:40
+      2    0.0%    0.0%  LazyCompile: *getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      2    0.0%    0.0%  LazyCompile: *fromString buffer.js:379:20
+      2    0.0%    0.0%  LazyCompile: *format /home/isucon/isucari/webapp/nodejs/node_modules/sqlstring/lib/SqlString.js:76:35
+      2    0.0%    0.0%  LazyCompile: *destroy internal/streams/destroy.js:4:17
+      2    0.0%    0.0%  LazyCompile: *addListener events.js:282:58
+      2    0.0%    0.0%  LazyCompile: *SBMH._sbmh_feed /home/isucon/isucari/webapp/nodejs/node_modules/streamsearch/lib/sbmh.js:60:37
+      2    0.0%    0.0%  LazyCompile: *Readable _stream_readable.js:151:18
+      2    0.0%    0.0%  LazyCompile: *Query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:17:14
+      2    0.0%    0.0%  LazyCompile: *ByteInputStream.get /home/isucon/isucari/webapp/nodejs/node_modules/busboy/deps/encoding/encoding.js:92:22
+      2    0.0%    0.0%  LazyCompile: *<anonymous> internal/util/debuglog.js:57:18
+      1    0.0%    0.0%  RegExp: ^TLS_
+      1    0.0%    0.0%  RegExp: ^((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$
+      1    0.0%    0.0%  RegExp: [\0\b\t\n\r\x1a\"\'\\] {1}
+      1    0.0%    0.0%  RegExp: [\0\b\t\n\r\x1a\"\'\\]
+      1    0.0%    0.0%  LazyCompile: *writeUInt8 internal/buffer.js:733:20
+      1    0.0%    0.0%  LazyCompile: *writeHeader /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:800:14
+      1    0.0%    0.0%  LazyCompile: *write /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:220:8
+      1    0.0%    0.0%  LazyCompile: *toInteger buffer.js:160:19
+      1    0.0%    0.0%  LazyCompile: *sanitizeUrl /home/isucon/isucari/webapp/nodejs/node_modules/find-my-way/index.js:546:22
+      1    0.0%    0.0%  LazyCompile: *removeListener events.js:326:28
+      1    0.0%    0.0%  LazyCompile: *parserOnIncoming _http_server.js:676:26
+      1    0.0%    0.0%  LazyCompile: *parseParams /home/isucon/isucari/webapp/nodejs/node_modules/busboy/lib/utils.js:7:21
+      1    0.0%    0.0%  LazyCompile: *parseLengthCodedInt /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:648:22
+      1    0.0%    0.0%  LazyCompile: *onceWrapper events.js:293:21
+      1    0.0%    0.0%  LazyCompile: *once events.js:309:44
+      1    0.0%    0.0%  LazyCompile: *matchKnownFields _http_incoming.js:139:26
+      1    0.0%    0.0%  LazyCompile: *keyFromFields /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/parser_cache.js:9:23
+      1    0.0%    0.0%  LazyCompile: *hookRunner /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/hooks.js:61:21
+      1    0.0%    0.0%  LazyCompile: *hidden internal/errors.js:233:25
+      1    0.0%    0.0%  LazyCompile: *getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+      1    0.0%    0.0%  LazyCompile: *getDBConnection /home/isucon/isucari/webapp/nodejs/index.js:73:31
+      1    0.0%    0.0%  LazyCompile: *get internal/bootstrap/pre_execution.js:271:8
+      1    0.0%    0.0%  LazyCompile: *forEach /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/utils.js:207:17
+      1    0.0%    0.0%  LazyCompile: *endReadableNT _stream_readable.js:1171:23
+      1    0.0%    0.0%  LazyCompile: *deepMerge /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/utils.js:275:19
+      1    0.0%    0.0%  LazyCompile: *decodeChunk _stream_writable.js:346:21
+      1    0.0%    0.0%  LazyCompile: *createWriteWrap internal/stream_base_commons.js:95:25
+      1    0.0%    0.0%  LazyCompile: *connect _tls_wrap.js:1371:35
+      1    0.0%    0.0%  LazyCompile: *cleanParser _http_common.js:224:21
+      1    0.0%    0.0%  LazyCompile: *arrayClone events.js:481:20
+      1    0.0%    0.0%  LazyCompile: *_unrefTimer net.js:344:52
+      1    0.0%    0.0%  LazyCompile: *_finish _http_server.js:171:52
+      1    0.0%    0.0%  LazyCompile: *_addHeaderLines _http_incoming.js:111:25
+      1    0.0%    0.0%  LazyCompile: *ReadableState _stream_readable.js:72:23
+      1    0.0%    0.0%  LazyCompile: *OutgoingMessage _http_outgoing.js:72:25
+      1    0.0%    0.0%  LazyCompile: *EventEmitter.init events.js:82:29
+      1    0.0%    0.0%  LazyCompile: *EventEmitter events.js:42:22
+      1    0.0%    0.0%  LazyCompile: *ClientRequest _http_client.js:76:23
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:7:18
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:221:31
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:536:33
+
+ [C++]:
+   ticks  total  nonlib   name
+   7835   23.7%   35.8%  __libc_write
+   6196   18.7%   28.3%  epoll_pwait
+    613    1.9%    2.8%  __libc_read
+    352    1.1%    1.6%  void node::StreamBase::JSMethod<&node::StreamBase::Writev>(v8::FunctionCallbackInfo<v8::Value> const&)
+    330    1.0%    1.5%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+    267    0.8%    1.2%  epoll_ctl
+    214    0.6%    1.0%  __libc_malloc
+    157    0.5%    0.7%  node::TLSWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+    150    0.5%    0.7%  __lll_unlock_wake
+    137    0.4%    0.6%  cfree
+    101    0.3%    0.5%  syscall
+    100    0.3%    0.5%  node::cares_wrap::(anonymous namespace)::GetAddrInfo(v8::FunctionCallbackInfo<v8::Value> const&)
+     98    0.3%    0.4%  node::crypto::SecureContext::Init(v8::FunctionCallbackInfo<v8::Value> const&)
+     96    0.3%    0.4%  node::crypto::SSLWrap<node::TLSWrap>::SetSession(v8::FunctionCallbackInfo<v8::Value> const&)
+     83    0.3%    0.4%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     82    0.2%    0.4%  node::crypto::SecureContext::SetCiphers(v8::FunctionCallbackInfo<v8::Value> const&)
+     81    0.2%    0.4%  _init
+     69    0.2%    0.3%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     58    0.2%    0.3%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     57    0.2%    0.3%  __pthread_cond_signal
+     56    0.2%    0.3%  v8::internal::FixedArray::set(int, v8::internal::Object)
+     45    0.1%    0.2%  node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+     44    0.1%    0.2%  __GI___pthread_mutex_lock
+     43    0.1%    0.2%  node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     42    0.1%    0.2%  v8::internal::DateParser::DateStringTokenizer<unsigned char const>::Scan()
+     42    0.1%    0.2%  node::InternalCallbackScope::Close()
+     41    0.1%    0.2%  v8::String::Utf8Length(v8::Isolate*) const
+     38    0.1%    0.2%  node::LibuvStreamWrap::Initialize(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)::{lambda(v8::FunctionCallbackInfo<v8::Value> const&)#1}::_FUN(v8::FunctionCallbackInfo<v8::Value> const&)
+     37    0.1%    0.2%  void node::GetSockOrPeerName<node::TCPWrap, &uv_tcp_getpeername>(v8::FunctionCallbackInfo<v8::Value> const&)
+     37    0.1%    0.2%  v8::ArrayBuffer::GetContents()
+     36    0.1%    0.2%  node::StreamBase::CallJSOnreadMethod(long, v8::Local<v8::ArrayBuffer>, unsigned long)
+     34    0.1%    0.2%  v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+     34    0.1%    0.2%  node::TLSWrap::DestroySSL(v8::FunctionCallbackInfo<v8::Value> const&)
+     34    0.1%    0.2%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+     33    0.1%    0.2%  void node::StreamBase::JSMethod<&node::StreamBase::Shutdown>(v8::FunctionCallbackInfo<v8::Value> const&)
+     32    0.1%    0.1%  v8::internal::Builtin_TypedArrayPrototypeBuffer(int, unsigned long*, v8::internal::Isolate*)
+     31    0.1%    0.1%  node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)
+     31    0.1%    0.1%  __GI___pthread_getspecific
+     30    0.1%    0.1%  operator new(unsigned long)
+     29    0.1%    0.1%  node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+     27    0.1%    0.1%  v8::(anonymous namespace)::CallDepthScope<true>::CallDepthScope(v8::internal::Isolate*, v8::Local<v8::Context>)
+     26    0.1%    0.1%  write
+     24    0.1%    0.1%  v8::internal::SafepointTable::FindEntry(unsigned long) const
+     24    0.1%    0.1%  v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::NewStringType, int)
+     24    0.1%    0.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+     23    0.1%    0.1%  node::AsyncWrap::EmitTraceEventBefore()
+     21    0.1%    0.1%  __GI___pthread_mutex_unlock
+     20    0.1%    0.1%  do_futex_wait.constprop.1
+     19    0.1%    0.1%  void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    0.1%    0.1%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+     19    0.1%    0.1%  v8::internal::SafepointTable::SafepointTable(v8::internal::Code)
+     19    0.1%    0.1%  operator delete(void*)
+     19    0.1%    0.1%  __lll_lock_wait
+     18    0.1%    0.1%  node::(anonymous namespace)::Parser::Execute(v8::FunctionCallbackInfo<v8::Value> const&)
+     18    0.1%    0.1%  mprotect
+     18    0.1%    0.1%  bool v8::internal::DateParser::Parse<unsigned char const>(v8::internal::Isolate*, v8::internal::Vector<unsigned char const>, v8::internal::FixedArray)
+     17    0.1%    0.1%  v8::Value::IsArrayBufferView() const
+     17    0.1%    0.1%  node::TLSWrap::Wrap(v8::FunctionCallbackInfo<v8::Value> const&)
+     17    0.1%    0.1%  __pthread_cond_timedwait
+     16    0.0%    0.1%  v8::internal::Builtin_ErrorConstructor(int, unsigned long*, v8::internal::Isolate*)
+     16    0.0%    0.1%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     16    0.0%    0.1%  v8::HandleScope::HandleScope(v8::Isolate*)
+     16    0.0%    0.1%  v8::Context::Exit()
+     16    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+     16    0.0%    0.1%  node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+     15    0.0%    0.1%  v8::(anonymous namespace)::CallDepthScope<true>::~CallDepthScope()
+     14    0.0%    0.1%  v8::ArrayBufferView::Buffer()
+     14    0.0%    0.1%  node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.0%    0.1%  node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, node::InternalCallbackScope::ResourceExpectation)
+     14    0.0%    0.1%  node::EmitToJSStreamListener::OnStreamAlloc(unsigned long)
+     14    0.0%    0.1%  __clock_gettime
+     13    0.0%    0.1%  void node::StreamBase::JSMethod<&(int node::StreamBase::WriteString<(node::encoding)4>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+     13    0.0%    0.1%  shutdown
+     13    0.0%    0.1%  node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+     13    0.0%    0.1%  __errno_location
+     12    0.0%    0.1%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+     12    0.0%    0.1%  v8::internal::ApiNatives::InstantiateObject(v8::internal::Isolate*, v8::internal::Handle<v8::internal::ObjectTemplateInfo>, v8::internal::Handle<v8::internal::JSReceiver>)
+     12    0.0%    0.1%  v8::EscapableHandleScope::Escape(unsigned long*)
+     12    0.0%    0.1%  node::crypto::SecureContext::SetCipherSuites(v8::FunctionCallbackInfo<v8::Value> const&)
+     12    0.0%    0.1%  node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+     12    0.0%    0.1%  node::LibuvStreamWrap::OnUvRead(long, uv_buf_t const*)
+     11    0.0%    0.1%  v8::internal::RuntimeCallTimerScope::RuntimeCallTimerScope(v8::internal::Isolate*, v8::internal::RuntimeCallCounterId)
+     11    0.0%    0.1%  v8::internal::(anonymous namespace)::ProbeInstantiationsCache(v8::internal::Isolate*, int, v8::internal::(anonymous namespace)::CachingMode)
+     11    0.0%    0.1%  node::Environment::CheckImmediate(uv_check_s*)
+     11    0.0%    0.1%  node::EmitToJSStreamListener::OnStreamRead(long, uv_buf_t const&)
+     11    0.0%    0.1%  node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+     10    0.0%    0.0%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+     10    0.0%    0.0%  v8::Value::IsFunction() const
+      9    0.0%    0.0%  v8::internal::Isolate::native_context()
+      9    0.0%    0.0%  v8::TryCatch::SetVerbose(bool)
+      9    0.0%    0.0%  v8::HandleScope::~HandleScope()
+      9    0.0%    0.0%  v8::ArrayBufferView::HasBuffer() const
+      9    0.0%    0.0%  v8::ArrayBuffer::New(v8::Isolate*, void*, unsigned long, v8::ArrayBufferCreationMode)
+      9    0.0%    0.0%  operator delete[](void*)
+      9    0.0%    0.0%  node::fs::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.0%    0.0%  node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.0%    0.0%  node::crypto::SecureContext::AddRootCerts(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.0%    0.0%  node::(anonymous namespace)::GetLibuvNow(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.0%    0.0%  __libc_realloc
+      8    0.0%    0.0%  v8::internal::JSReceiver::GetDataProperty(v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::Handle<v8::internal::Name>)
+      8    0.0%    0.0%  v8::EscapableHandleScope::EscapableHandleScope(v8::Isolate*)
+      8    0.0%    0.0%  node::i18n::ToASCII(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.0%    0.0%  node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.0%    0.0%  node::LibuvStreamWrap::ReadStart()::{lambda(uv_handle_s*, unsigned long, uv_buf_t*)#1}::_FUN(uv_handle_s*, unsigned long, uv_buf_t*)
+      8    0.0%    0.0%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      7    0.0%    0.0%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)4>(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.0%    0.0%  v8::internal::Builtins::builtin_handle(int)
+      7    0.0%    0.0%  v8::TryCatch::~TryCatch()
+      7    0.0%    0.0%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+      7    0.0%    0.0%  v8::Isolate::InContext()
+      7    0.0%    0.0%  non-virtual thunk to node::LibuvStreamWrap::GetAsyncWrap()
+      7    0.0%    0.0%  node::crypto::SecureContext::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.0%    0.0%  fwrite
+      6    0.0%    0.0%  v8::internal::IsolateFromNeverReadOnlySpaceObject(unsigned long)
+      6    0.0%    0.0%  v8::TryCatch::TryCatch(v8::Isolate*)
+      6    0.0%    0.0%  v8::Isolate::RunMicrotasks()
+      6    0.0%    0.0%  v8::Context::Enter()
+      6    0.0%    0.0%  operator new[](unsigned long)
+      6    0.0%    0.0%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.0%    0.0%  node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.0%    0.0%  node::TraceEventScope::~TraceEventScope()
+      6    0.0%    0.0%  node::Buffer::Data(v8::Local<v8::Value>)
+      6    0.0%    0.0%  __pthread_disable_asynccancel
+      6    0.0%    0.0%  __pthread_cond_wait
+      5    0.0%    0.0%  v8::internal::libc_memmove(void*, void const*, unsigned long)
+      5    0.0%    0.0%  v8::internal::heap_internals::GenerationalBarrierInternal(v8::internal::HeapObject, unsigned long, v8::internal::HeapObject)
+      5    0.0%    0.0%  v8::internal::DateParser::DateToken v8::internal::DateParser::ParseES5DateTime<unsigned char const>(v8::internal::DateParser::DateStringTokenizer<unsigned char const>*, v8::internal::DateParser::DayComposer*, v8::internal::DateParser::TimeComposer*, v8::internal::DateParser::TimeZoneComposer*)
+      5    0.0%    0.0%  v8::Isolate::GetCurrentContext()
+      5    0.0%    0.0%  v8::Context::GetNumberOfEmbedderDataFields()
+      5    0.0%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      5    0.0%    0.0%  std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
+      5    0.0%    0.0%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.0%    0.0%  node::AsyncWrap::EmitAfter(node::Environment*, double)
+      4    0.0%    0.0%  v8::internal::HeapObject::map() const
+      4    0.0%    0.0%  v8::internal::FunctionCallbackArguments::FunctionCallbackArguments(v8::internal::Isolate*, v8::internal::Object, v8::internal::HeapObject, v8::internal::Object, v8::internal::HeapObject, unsigned long*, int)
+      4    0.0%    0.0%  v8::internal::Builtin_DateConstructor(int, unsigned long*, v8::internal::Isolate*)
+      4    0.0%    0.0%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+      4    0.0%    0.0%  v8::ArrayBufferView::ByteLength()
+      4    0.0%    0.0%  unibrow::Utf8::Encode(char*, unsigned int, int, bool)
+      4    0.0%    0.0%  node::TLSWrap::SetServername(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  node::LibuvStreamWrap::ReadStart()::{lambda(uv_stream_s*, long, uv_buf_t const*)#2}::_FUN(uv_stream_s*, long, uv_buf_t const*)
+      4    0.0%    0.0%  node::AsyncWrap::AsyncWrap(node::Environment*, v8::Local<v8::Object>, node::AsyncWrap::ProviderType, double, bool)
+      3    0.0%    0.0%  void node::StreamBase::JSMethod<&node::StreamBase::ReadStartJS>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  void node::BaseObject::InternalFieldSet<2, &(v8::Value::IsFunction() const)>(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
+      3    0.0%    0.0%  v8::internal::Variable* v8::internal::Scope::Lookup<(v8::internal::Scope::ScopeLookupMode)0>(v8::internal::VariableProxy*, v8::internal::Scope*, v8::internal::Scope*, v8::internal::Scope*, bool)
+      3    0.0%    0.0%  v8::internal::Compiler::PostInstantiation(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::AllocationType)
+      3    0.0%    0.0%  v8::internal::Builtins::builtin(int)
+      3    0.0%    0.0%  v8::internal::Accessors::ArrayLengthSetter(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      3    0.0%    0.0%  v8::Isolate::GetCurrent()
+      3    0.0%    0.0%  operator new(unsigned long, std::nothrow_t const&)
+      3    0.0%    0.0%  non-virtual thunk to node::LibuvStreamWrap::DoTryWrite(uv_buf_t**, unsigned long*)
+      3    0.0%    0.0%  node::fs::OpenFileHandle(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::crypto::SSLWrap<node::TLSWrap>::GetEphemeralKeyInfo(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::crypto::RandomBytes(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::SyncProcessRunner::Spawn(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::LibuvStreamWrap::DoTryWrite(uv_buf_t**, unsigned long*)
+      3    0.0%    0.0%  node::Environment::StartProfilerIdleNotifier()::{lambda(uv_check_s*)#2}::_FUN(uv_check_s*)
+      3    0.0%    0.0%  node::Environment::Reallocate(char*, unsigned long, unsigned long)
+      3    0.0%    0.0%  node::AsyncWrap::EmitTraceEventDestroy()
+      3    0.0%    0.0%  node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(char const*, unsigned long), &node::(anonymous namespace)::Parser::on_header_field>::Raw(llhttp__internal_s*, char const*, unsigned long)
+      3    0.0%    0.0%  node::(anonymous namespace)::Parser::Free(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  v8::internal::libc_memcpy(void*, void const*, unsigned long)
+      2    0.0%    0.0%  v8::internal::Zone::New(unsigned long)
+      2    0.0%    0.0%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      2    0.0%    0.0%  v8::internal::PropertyCallbackArguments::PropertyCallbackArguments(v8::internal::Isolate*, v8::internal::Object, v8::internal::Object, v8::internal::JSObject, v8::Maybe<v8::internal::ShouldThrow>)
+      2    0.0%    0.0%  v8::internal::HandleScope::~HandleScope()
+      2    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      2    0.0%    0.0%  v8::internal::Builtins::GetBuiltinFromBailoutId(v8::internal::BailoutId)
+      2    0.0%    0.0%  v8::internal::Builtin_ObjectGetPrototypeOf(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_GlobalDecodeURIComponent(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      2    0.0%    0.0%  v8::Value::ToString(v8::Local<v8::Context>) const
+      2    0.0%    0.0%  v8::TryCatch::SetCaptureMessage(bool)
+      2    0.0%    0.0%  v8::Object::Has(v8::Local<v8::Context>, v8::Local<v8::Value>)
+      2    0.0%    0.0%  v8::Isolate::SuppressMicrotaskExecutionScope::SuppressMicrotaskExecutionScope(v8::Isolate*)
+      2    0.0%    0.0%  v8::ArrayBufferView::ByteOffset()
+      2    0.0%    0.0%  std::ios_base::ios_base()
+      2    0.0%    0.0%  sigemptyset
+      2    0.0%    0.0%  operator new[](unsigned long, std::nothrow_t const&)
+      2    0.0%    0.0%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::crypto::NodeBIO::PeekWritable(unsigned long*)
+      2    0.0%    0.0%  node::contextify::ContextifyContext::PropertyGetterCallback(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::TLSWrap::OnStreamRead(long, uv_buf_t const&)
+      2    0.0%    0.0%  node::TLSWrap::GetServername(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      2    0.0%    0.0%  node::Environment::NativeImmediateCallbackImpl<node::TLSWrap::EncOut()::{lambda(node::Environment*)#2}>::Call(node::Environment*)
+      2    0.0%    0.0%  node::ConnectionWrap<node::TCPWrap, uv_tcp_s>::OnConnection(uv_stream_s*, int)
+      2    0.0%    0.0%  node::AsyncWrap::~AsyncWrap()
+      2    0.0%    0.0%  node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(), &node::(anonymous namespace)::Parser::on_headers_complete>::Raw(llhttp__internal_s*)
+      2    0.0%    0.0%  mmap
+      2    0.0%    0.0%  madvise
+      2    0.0%    0.0%  getsockopt
+      2    0.0%    0.0%  __pthread_enable_asynccancel
+      2    0.0%    0.0%  __pthread_cond_broadcast
+      2    0.0%    0.0%  _IO_vfprintf
+      1    0.0%    0.0%  v8::internal::tracing::ScopedTracer::~ScopedTracer()
+      1    0.0%    0.0%  v8::internal::VariableProxy::BindTo(v8::internal::Variable*)
+      1    0.0%    0.0%  v8::internal::StringSearch<unsigned char, unsigned char>::InitialSearch(v8::internal::StringSearch<unsigned char, unsigned char>*, v8::internal::Vector<unsigned char const>, int)
+      1    0.0%    0.0%  v8::internal::SourcePositionTableIterator::Advance()
+      1    0.0%    0.0%  v8::internal::SourcePositionTableBuilder::AddEntry(v8::internal::PositionTableEntry const&)
+      1    0.0%    0.0%  v8::internal::SharedFunctionInfo::is_compiled() const
+      1    0.0%    0.0%  v8::internal::Scope::Scope(v8::internal::Zone*, v8::internal::ScopeType, v8::internal::Handle<v8::internal::ScopeInfo>)
+      1    0.0%    0.0%  v8::internal::Scope::AllocateVariablesRecursively()
+      1    0.0%    0.0%  v8::internal::OptimizedCompilationInfo::native_context() const
+      1    0.0%    0.0%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::LookupIterator::Configuration)
+      1    0.0%    0.0%  v8::internal::HandlerTable::HandlerTable(v8::internal::BytecodeArray)
+      1    0.0%    0.0%  v8::internal::DeclarationScope::AllocateScopeInfos(v8::internal::ParseInfo*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Compiler::FinalizeOptimizedCompilationJob(v8::internal::OptimizedCompilationJob*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::CompilationCache::LookupRegExp(v8::internal::Handle<v8::internal::String>, v8::base::Flags<v8::internal::JSRegExp::Flag, int>)
+      1    0.0%    0.0%  v8::internal::CompilationCache::Iterate(v8::internal::RootVisitor*)
+      1    0.0%    0.0%  v8::internal::CodeDesc::Initialize(v8::internal::CodeDesc*, v8::internal::Assembler*, int, int, int, int, int)
+      1    0.0%    0.0%  v8::internal::Builtins::InvokeApiFunction(v8::internal::Isolate*, bool, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*, v8::internal::Handle<v8::internal::HeapObject>)
+      1    0.0%    0.0%  v8::internal::Builtin_JsonStringify(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_ArrayShift(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::AssemblerOptions::Default(v8::internal::Isolate*, bool)
+      1    0.0%    0.0%  v8::internal::AssemblerBase::~AssemblerBase()
+      1    0.0%    0.0%  v8::internal::Accessors::FunctionPrototypeGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  v8::internal::Accessors::ErrorStackGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  v8::Value::IsUint8Array() const
+      1    0.0%    0.0%  v8::Value::IsObject() const
+      1    0.0%    0.0%  v8::V8::GlobalizeReference(v8::internal::Isolate*, unsigned long*)
+      1    0.0%    0.0%  v8::String::Length() const
+      1    0.0%    0.0%  v8::Object::Get(v8::Local<v8::Context>, unsigned int)
+      1    0.0%    0.0%  v8::Isolate::SuppressMicrotaskExecutionScope::~SuppressMicrotaskExecutionScope()
+      1    0.0%    0.0%  v8::Int32::Value() const
+      1    0.0%    0.0%  v8::Function::NewInstanceWithSideEffectType(v8::Local<v8::Context>, int, v8::Local<v8::Value>*, v8::SideEffectType) const
+      1    0.0%    0.0%  v8::(anonymous namespace)::CallDepthScope<false>::~CallDepthScope()
+      1    0.0%    0.0%  v8::(anonymous namespace)::CallDepthScope<false>::CallDepthScope(v8::internal::Isolate*, v8::Local<v8::Context>)
+      1    0.0%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.0%  std::ostream::sentry::~sentry()
+      1    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      1    0.0%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > const& std::use_facet<std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
+      1    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1    0.0%    0.0%  std::basic_ios<char, std::char_traits<char> >::_M_cache_locale(std::locale const&)
+      1    0.0%    0.0%  std::_Rb_tree<unsigned long, std::pair<unsigned long const, int>, std::_Select1st<std::pair<unsigned long const, int> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, int> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long const, int> >*)
+      1    0.0%    0.0%  non-virtual thunk to node::(anonymous namespace)::Parser::OnStreamAlloc(unsigned long)
+      1    0.0%    0.0%  node::fs::WriteString(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::errors::TryCatchScope::~TryCatchScope()
+      1    0.0%    0.0%  node::crypto::SecureContext::SetECDHCurve(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::crypto::SecureContext::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::crypto::SSLWrap<node::TLSWrap>::GetPeerCertificate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::contextify::ContextifyContext::MakeContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::contextify::CompiledFnEntry::~CompiledFnEntry()
+      1    0.0%    0.0%  node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::PipeWrap::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::PatchProcessObject(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::NonOwningExternalOneByteResource::data() const
+      1    0.0%    0.0%  node::LibuvStreamWrap::GetAsyncWrap()
+      1    0.0%    0.0%  node::HandleWrap::OnClose(uv_handle_s*)
+      1    0.0%    0.0%  node::Buffer::Length(v8::Local<v8::Value>)
+      1    0.0%    0.0%  node::AsyncWrap::GetAsyncId(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::AsyncWrap::EmitBefore(node::Environment*, double)
+      1    0.0%    0.0%  node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      1    0.0%    0.0%  node::(anonymous namespace)::ProcessWrap::Spawn(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(), &node::(anonymous namespace)::Parser::on_message_complete>::Raw(llhttp__internal_s*)
+      1    0.0%    0.0%  node::(anonymous namespace)::Parser::Initialize(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  munmap
+      1    0.0%    0.0%  fputc
+      1    0.0%    0.0%  __GI___pthread_once
+      1    0.0%    0.0%  _IO_default_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+   2658    8.0%   12.1%  JavaScript
+  19147   57.9%   87.5%  C++
+    377    1.1%    1.7%  GC
+  11185   33.8%          Shared libraries
+     80    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   7820   57.6%   23.6%  __libc_write
+   2230   16.4%    6.7%  v8::internal::Builtin_ErrorConstructor(int, unsigned long*, v8::internal::Isolate*)
+   1899   14.0%    5.7%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+    243    1.8%    0.7%  v8::internal::Builtin_JsonStringify(int, unsigned long*, v8::internal::Isolate*)
+    221    1.6%    0.7%  v8::internal::Builtin_DateConstructor(int, unsigned long*, v8::internal::Isolate*)
+     69    0.5%    0.2%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     66    0.5%    0.2%  __lll_unlock_wake
+     63    0.5%    0.2%  v8::internal::Builtin_TypedArrayPrototypeBuffer(int, unsigned long*, v8::internal::Isolate*)
+     56    0.4%    0.2%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+     53    0.4%    0.2%  syscall
+     47    0.3%    0.1%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     44    0.3%    0.1%  _init
+     41    0.3%    0.1%  v8::String::Utf8Length(v8::Isolate*) const
+     40    0.3%    0.1%  node::(anonymous namespace)::Parser::Execute(v8::FunctionCallbackInfo<v8::Value> const&)
+     40    0.3%    0.1%  cfree
+     37    0.3%    0.1%  v8::ArrayBuffer::GetContents()
+     34    0.3%    0.1%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+     24    0.2%    0.1%  v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::NewStringType, int)
+     24    0.2%    0.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+     19    0.1%    0.1%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+     19    0.1%    0.1%  __libc_malloc
+     18    0.1%    0.1%  write
+     17    0.1%    0.1%  void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     17    0.1%    0.1%  v8::Value::IsArrayBufferView() const
+     16    0.1%    0.0%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     16    0.1%    0.0%  __pthread_cond_signal
+     15    0.1%    0.0%  mprotect
+     14    0.1%    0.0%  v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+     14    0.1%    0.0%  v8::ArrayBufferView::Buffer()
+     12    0.1%    0.0%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+     12    0.1%    0.0%  node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+     10    0.1%    0.0%  v8::internal::Builtin_ObjectDefineProperty(int, unsigned long*, v8::internal::Isolate*)
+     10    0.1%    0.0%  operator new(unsigned long)
+     10    0.1%    0.0%  __errno_location
+      9    0.1%    0.0%  v8::internal::Builtin_GlobalDecodeURIComponent(int, unsigned long*, v8::internal::Isolate*)
+      9    0.1%    0.0%  v8::TryCatch::SetVerbose(bool)
+      9    0.1%    0.0%  v8::ArrayBufferView::HasBuffer() const
+      9    0.1%    0.0%  operator delete[](void*)
+      9    0.1%    0.0%  __GI___pthread_mutex_lock
+      9    0.1%    0.0%  __GI___pthread_getspecific
+      8    0.1%    0.0%  node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.1%    0.0%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      8    0.1%    0.0%  epoll_ctl
+      7    0.1%    0.0%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)4>(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.1%    0.0%  v8::TryCatch::~TryCatch()
+      7    0.1%    0.0%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+      7    0.1%    0.0%  node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.0%    0.0%  v8::internal::Builtin_StringPrototypeToUpperCaseIntl(int, unsigned long*, v8::internal::Isolate*)
+      6    0.0%    0.0%  v8::TryCatch::TryCatch(v8::Isolate*)
+      6    0.0%    0.0%  v8::HandleScope::HandleScope(v8::Isolate*)
+      6    0.0%    0.0%  operator new[](unsigned long)
+      6    0.0%    0.0%  node::Buffer::Data(v8::Local<v8::Value>)
+      6    0.0%    0.0%  fwrite
+      5    0.0%    0.0%  v8::internal::libc_memmove(void*, void const*, unsigned long)
+      5    0.0%    0.0%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+      5    0.0%    0.0%  v8::Isolate::RunMicrotasks()
+      5    0.0%    0.0%  operator delete(void*)
+      5    0.0%    0.0%  __pthread_disable_asynccancel
+      4    0.0%    0.0%  v8::ArrayBufferView::ByteLength()
+      4    0.0%    0.0%  unibrow::Utf8::Encode(char*, unsigned int, int, bool)
+      3    0.0%    0.0%  void node::BaseObject::InternalFieldSet<2, &(v8::Value::IsFunction() const)>(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
+      3    0.0%    0.0%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+      3    0.0%    0.0%  v8::internal::Compiler::PostInstantiation(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::AllocationType)
+      3    0.0%    0.0%  v8::internal::Builtin_ReflectDefineProperty(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Builtin_NumberPrototypeToString(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Builtin_ArrayConcat(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Accessors::ArrayLengthSetter(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      3    0.0%    0.0%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+      3    0.0%    0.0%  v8::HandleScope::~HandleScope()
+      3    0.0%    0.0%  operator new(unsigned long, std::nothrow_t const&)
+      3    0.0%    0.0%  non-virtual thunk to node::LibuvStreamWrap::DoTryWrite(uv_buf_t**, unsigned long*)
+      3    0.0%    0.0%  node::LibuvStreamWrap::DoTryWrite(uv_buf_t**, unsigned long*)
+      2    0.0%    0.0%  v8::internal::libc_memcpy(void*, void const*, unsigned long)
+      2    0.0%    0.0%  v8::internal::heap_internals::GenerationalBarrierInternal(v8::internal::HeapObject, unsigned long, v8::internal::HeapObject)
+      2    0.0%    0.0%  v8::internal::Zone::New(unsigned long)
+      2    0.0%    0.0%  v8::internal::Variable* v8::internal::Scope::Lookup<(v8::internal::Scope::ScopeLookupMode)0>(v8::internal::VariableProxy*, v8::internal::Scope*, v8::internal::Scope*, v8::internal::Scope*, bool)
+      2    0.0%    0.0%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      2    0.0%    0.0%  v8::internal::PropertyCallbackArguments::PropertyCallbackArguments(v8::internal::Isolate*, v8::internal::Object, v8::internal::Object, v8::internal::JSObject, v8::Maybe<v8::internal::ShouldThrow>)
+      2    0.0%    0.0%  v8::internal::HeapObject::map() const
+      2    0.0%    0.0%  v8::internal::HandleScope::~HandleScope()
+      2    0.0%    0.0%  v8::internal::Builtins::builtin_handle(int)
+      2    0.0%    0.0%  v8::internal::Builtin_ObjectGetPrototypeOf(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_FunctionConstructor(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_DatePrototypeToISOString(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_CallSitePrototypeToString(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_ArrayShift(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      2    0.0%    0.0%  v8::Value::ToString(v8::Local<v8::Context>) const
+      2    0.0%    0.0%  v8::TryCatch::SetCaptureMessage(bool)
+      2    0.0%    0.0%  v8::Isolate::SuppressMicrotaskExecutionScope::SuppressMicrotaskExecutionScope(v8::Isolate*)
+      2    0.0%    0.0%  v8::ArrayBufferView::ByteOffset()
+      2    0.0%    0.0%  std::ios_base::ios_base()
+      2    0.0%    0.0%  operator new[](unsigned long, std::nothrow_t const&)
+      2    0.0%    0.0%  node::contextify::ContextifyContext::PropertyGetterCallback(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  __pthread_enable_asynccancel
+      1    0.0%    0.0%  v8::internal::tracing::ScopedTracer::~ScopedTracer()
+      1    0.0%    0.0%  v8::internal::VariableProxy::BindTo(v8::internal::Variable*)
+      1    0.0%    0.0%  v8::internal::StringSearch<unsigned char, unsigned char>::InitialSearch(v8::internal::StringSearch<unsigned char, unsigned char>*, v8::internal::Vector<unsigned char const>, int)
+      1    0.0%    0.0%  v8::internal::SourcePositionTableIterator::Advance()
+      1    0.0%    0.0%  v8::internal::SourcePositionTableBuilder::AddEntry(v8::internal::PositionTableEntry const&)
+      1    0.0%    0.0%  v8::internal::SharedFunctionInfo::is_compiled() const
+      1    0.0%    0.0%  v8::internal::Scope::Scope(v8::internal::Zone*, v8::internal::ScopeType, v8::internal::Handle<v8::internal::ScopeInfo>)
+      1    0.0%    0.0%  v8::internal::Scope::AllocateVariablesRecursively()
+      1    0.0%    0.0%  v8::internal::OptimizedCompilationInfo::native_context() const
+      1    0.0%    0.0%  v8::internal::HandlerTable::HandlerTable(v8::internal::BytecodeArray)
+      1    0.0%    0.0%  v8::internal::FixedArray::set(int, v8::internal::Object)
+      1    0.0%    0.0%  v8::internal::DeclarationScope::AllocateScopeInfos(v8::internal::ParseInfo*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::CompilationCache::LookupRegExp(v8::internal::Handle<v8::internal::String>, v8::base::Flags<v8::internal::JSRegExp::Flag, int>)
+      1    0.0%    0.0%  v8::internal::CodeDesc::Initialize(v8::internal::CodeDesc*, v8::internal::Assembler*, int, int, int, int, int)
+      1    0.0%    0.0%  v8::internal::Builtin_SymbolConstructor(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_ObjectGetOwnPropertyDescriptors(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::AssemblerOptions::Default(v8::internal::Isolate*, bool)
+      1    0.0%    0.0%  v8::internal::AssemblerBase::~AssemblerBase()
+      1    0.0%    0.0%  v8::internal::Accessors::FunctionPrototypeGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  v8::internal::Accessors::ErrorStackGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  v8::Value::IsUint8Array() const
+      1    0.0%    0.0%  v8::Value::IsObject() const
+      1    0.0%    0.0%  v8::String::Length() const
+      1    0.0%    0.0%  std::ostream::sentry::~sentry()
+      1    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      1    0.0%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > const& std::use_facet<std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
+      1    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1    0.0%    0.0%  std::basic_ios<char, std::char_traits<char> >::_M_cache_locale(std::locale const&)
+      1    0.0%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      1    0.0%    0.0%  std::_Rb_tree<unsigned long, std::pair<unsigned long const, int>, std::_Select1st<std::pair<unsigned long const, int> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, int> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long const, int> >*)
+      1    0.0%    0.0%  node::i18n::ToASCII(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::contextify::ContextifyContext::MakeContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::NonOwningExternalOneByteResource::data() const
+      1    0.0%    0.0%  node::Buffer::Length(v8::Local<v8::Value>)
+      1    0.0%    0.0%  node::AsyncWrap::GetAsyncId(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      1    0.0%    0.0%  madvise
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  10787   32.6%  /home/isucon/local/node/bin/node
+   2488   23.1%    /home/isucon/local/node/bin/node
+   1104   44.4%      /home/isucon/local/node/bin/node
+    632   57.2%        LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+    632  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    297   47.0%            LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+    149   23.6%            LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+    123   19.5%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     42    6.6%            LazyCompile: *query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+     15    2.4%            LazyCompile: *getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+    333   30.2%        /home/isucon/local/node/bin/node
+    166   49.8%          LazyCompile: *parse /home/isucon/isucari/webapp/nodejs/node_modules/cookie/index.js:49:15
+    166  100.0%            LazyCompile: ~fastifyCookieOnReqHandler /home/isucon/isucari/webapp/nodejs/node_modules/fastify-cookie/plugin.js:34:36
+    100   30.0%          LazyCompile: ~parse /home/isucon/isucari/webapp/nodejs/node_modules/cookie/index.js:49:15
+    100  100.0%            LazyCompile: ~fastifyCookieOnReqHandler /home/isucon/isucari/webapp/nodejs/node_modules/fastify-cookie/plugin.js:34:36
+     18    5.4%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     14    4.2%          /home/isucon/local/node/bin/node
+      6   42.9%            /home/isucon/local/node/bin/node
+      3   21.4%            LazyCompile: ~_normalizeIPv6 /home/isucon/isucari/webapp/nodejs/node_modules/uri-js/dist/es5/uri.all.js:811:24
+      1    7.1%            LazyCompile: ~translatePeerCertificate _tls_common.js:264:69
+      1    7.1%            LazyCompile: ~parse /home/isucon/isucari/webapp/nodejs/node_modules/secure-json-parse/index.js:5:16
+      1    7.1%            LazyCompile: ~parse /home/isucon/isucari/webapp/nodejs/node_modules/cookie/index.js:49:15
+      1    7.1%            LazyCompile: ~SemVer /home/isucon/isucari/webapp/nodejs/node_modules/semver/semver.js:300:17
+      1    7.1%            LazyCompile: *parse /home/isucon/isucari/webapp/nodejs/node_modules/cookie/index.js:49:15
+     10    3.0%          LazyCompile: ~HeaderParser._parseHeader /home/isucon/isucari/webapp/nodejs/node_modules/dicer/lib/HeaderParser.js:71:47
+     10  100.0%            LazyCompile: ~HeaderParser._finish /home/isucon/isucari/webapp/nodejs/node_modules/dicer/lib/HeaderParser.js:58:42
+     10    3.0%          LazyCompile: *format url.js:572:39
+      4   40.0%            LazyCompile: ~urlFormat url.js:536:19
+      4   40.0%            LazyCompile: *parse url.js:154:37
+      2   20.0%            LazyCompile: *RedirectableRequest._performRequest /home/isucon/isucari/webapp/nodejs/node_modules/follow-redirects/index.js:151:58
+      6    1.8%          LazyCompile: ~urlFormat url.js:536:19
+      6  100.0%            LazyCompile: ~RedirectableRequest._performRequest /home/isucon/isucari/webapp/nodejs/node_modules/follow-redirects/index.js:151:58
+     35    3.2%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     25    2.3%        LazyCompile: ~start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+     19   76.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     10   52.6%            LazyCompile: ~addCommand /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:460:13
+      5   26.3%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      4   21.1%            LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+      6   24.0%          LazyCompile: ~execute /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/command.js:22:10
+      6  100.0%            LazyCompile: ~handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     20    1.8%        LazyCompile: ~createSecureContext _tls_common.js:91:59
+     17   85.0%          LazyCompile: ~connect _tls_wrap.js:1371:35
+     17  100.0%            LazyCompile: ~createConnection https.js:95:26
+      3   15.0%          LazyCompile: *connect _tls_wrap.js:1371:35
+      3  100.0%            LazyCompile: ~createConnection https.js:95:26
+    426   17.1%      LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+    426  100.0%        LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    194   45.5%          LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     95   49.0%            LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     53   27.3%            LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     15    7.7%            LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+     12    6.2%            LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+     10    5.2%            LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      6    3.1%            LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+    113   26.5%          LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+     78   69.0%            LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     14   12.4%            LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      8    7.1%            LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      7    6.2%            LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      4    3.5%            LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     80   18.8%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     80  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+     27    6.3%          LazyCompile: *query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+     12   44.4%            LazyCompile: ~getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+      4   14.8%            LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      2    7.4%            LazyCompile: ~postComplete /home/isucon/isucari/webapp/nodejs/index.js:1188:28
+      2    7.4%            LazyCompile: ~postBuy /home/isucon/isucari/webapp/nodejs/index.js:725:23
+      2    7.4%            LazyCompile: ~getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+      2    7.4%            LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      1    3.7%            LazyCompile: ~postSell /home/isucon/isucari/webapp/nodejs/index.js:869:24
+      1    3.7%            LazyCompile: ~getUserItems /home/isucon/isucari/webapp/nodejs/index.js:473:28
+      1    3.7%            LazyCompile: ~getTransactions /home/isucon/isucari/webapp/nodejs/index.js:321:31
+      9    2.1%          LazyCompile: *getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+      3   33.3%            LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      3   33.3%            LazyCompile: *getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1   11.1%            LazyCompile: ~getTransactions /home/isucon/isucari/webapp/nodejs/index.js:321:31
+      1   11.1%            LazyCompile: ~getSettings /home/isucon/isucari/webapp/nodejs/index.js:1453:27
+      1   11.1%            LazyCompile: ~getQRCode /home/isucon/isucari/webapp/nodejs/index.js:1311:25
+    278   11.2%      LazyCompile: *getTextParser /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/text_parser.js:199:23
+    278  100.0%        LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+    278  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    278  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    109    4.4%      LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     59    2.4%      LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:7:18
+     58   98.3%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:71:26
+     58  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1    1.7%        LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:75:26
+      1  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+   1693   15.7%    v8::internal::Builtin_ErrorConstructor(int, unsigned long*, v8::internal::Isolate*)
+   1059   62.6%      LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+    555   52.4%        LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+    555  100.0%          /home/isucon/local/node/bin/node
+    555  100.0%            /home/isucon/local/node/bin/node
+    296   28.0%        LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+    296  100.0%          /home/isucon/local/node/bin/node
+    296  100.0%            /home/isucon/local/node/bin/node
+     57    5.4%        LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+     57  100.0%          /home/isucon/local/node/bin/node
+     57  100.0%            /home/isucon/local/node/bin/node
+     28    2.6%        LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:536:33
+     28  100.0%          /home/isucon/local/node/bin/node
+     28  100.0%            LazyCompile: ~getUserItems /home/isucon/isucari/webapp/nodejs/index.js:473:28
+     26    2.5%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+     26  100.0%          /home/isucon/local/node/bin/node
+     26  100.0%            /home/isucon/local/node/bin/node
+     24    2.3%        LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     24  100.0%          /home/isucon/local/node/bin/node
+     24  100.0%            /home/isucon/local/node/bin/node
+     24    2.3%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:536:33
+     24  100.0%          /home/isucon/local/node/bin/node
+     24  100.0%            LazyCompile: ~getUserItems /home/isucon/isucari/webapp/nodejs/index.js:473:28
+     19    1.8%        LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+     19  100.0%          /home/isucon/local/node/bin/node
+     19  100.0%            /home/isucon/local/node/bin/node
+     12    1.1%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+     12  100.0%          /home/isucon/local/node/bin/node
+     12  100.0%            LazyCompile: ~getTransactions /home/isucon/isucari/webapp/nodejs/index.js:321:31
+    449   26.5%      LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+    256   57.0%        LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+    256  100.0%          /home/isucon/local/node/bin/node
+    256  100.0%            /home/isucon/local/node/bin/node
+     64   14.3%        LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+     64  100.0%          /home/isucon/local/node/bin/node
+     64  100.0%            /home/isucon/local/node/bin/node
+     34    7.6%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+     34  100.0%          /home/isucon/local/node/bin/node
+     34  100.0%            /home/isucon/local/node/bin/node
+     30    6.7%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+     30  100.0%          /home/isucon/local/node/bin/node
+     30  100.0%            /home/isucon/local/node/bin/node
+     22    4.9%        LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+     22  100.0%          /home/isucon/local/node/bin/node
+     22  100.0%            /home/isucon/local/node/bin/node
+     20    4.5%        LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     20  100.0%          /home/isucon/local/node/bin/node
+     20  100.0%            /home/isucon/local/node/bin/node
+     18    4.0%        LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+     18  100.0%          /home/isucon/local/node/bin/node
+     18  100.0%            /home/isucon/local/node/bin/node
+    114    6.7%      LazyCompile: *query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+     21   18.4%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+     21  100.0%          /home/isucon/local/node/bin/node
+     21  100.0%            /home/isucon/local/node/bin/node
+     18   15.8%        LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     18  100.0%          /home/isucon/local/node/bin/node
+     18  100.0%            /home/isucon/local/node/bin/node
+     17   14.9%        LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+     17  100.0%          /home/isucon/local/node/bin/node
+     17  100.0%            /home/isucon/local/node/bin/node
+     12   10.5%        LazyCompile: ~getConfigByName /home/isucon/isucari/webapp/nodejs/index.js:1642:31
+     12  100.0%          LazyCompile: ~getShipmentServiceURL /home/isucon/isucari/webapp/nodejs/index.js:1662:37
+      9   75.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      3   25.0%            LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+     11    9.6%        LazyCompile: ~getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+     11  100.0%          LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+     11  100.0%            /home/isucon/local/node/bin/node
+     11    9.6%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+     11  100.0%          /home/isucon/local/node/bin/node
+     11  100.0%            /home/isucon/local/node/bin/node
+      6    5.3%        LazyCompile: ~getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+      2   33.3%          LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      2  100.0%            /home/isucon/local/node/bin/node
+      2   33.3%          LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      2  100.0%            /home/isucon/local/node/bin/node
+      1   16.7%          LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      1  100.0%            /home/isucon/local/node/bin/node
+      1   16.7%          LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%            /home/isucon/local/node/bin/node
+      5    4.4%        LazyCompile: ~getUserItems /home/isucon/isucari/webapp/nodejs/index.js:473:28
+      5  100.0%          /home/isucon/local/node/bin/node
+      5  100.0%            /home/isucon/local/node/bin/node
+      2    1.8%        LazyCompile: ~postSell /home/isucon/isucari/webapp/nodejs/index.js:869:24
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+      2    1.8%        LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+      2    1.8%        LazyCompile: *getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+     31    1.8%      LazyCompile: ~query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+     18   58.1%        LazyCompile: ~getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     12   66.7%          LazyCompile: ~getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     12  100.0%            /home/isucon/local/node/bin/node
+      5   27.8%          LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      5  100.0%            /home/isucon/local/node/bin/node
+      1    5.6%          LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:536:33
+      1  100.0%            /home/isucon/local/node/bin/node
+      6   19.4%        LazyCompile: ~getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+      3   50.0%          LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      3  100.0%            /home/isucon/local/node/bin/node
+      2   33.3%          LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      2  100.0%            /home/isucon/local/node/bin/node
+      1   16.7%          LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%            /home/isucon/local/node/bin/node
+      2    6.5%        LazyCompile: ~getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+      2  100.0%          LazyCompile: ~postSell /home/isucon/isucari/webapp/nodejs/index.js:869:24
+      2  100.0%            /home/isucon/local/node/bin/node
+      2    6.5%        LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+      1    3.2%        LazyCompile: ~postShipDone /home/isucon/isucari/webapp/nodejs/index.js:1061:28
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    3.2%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    3.2%        LazyCompile: ~getConfigByName /home/isucon/isucari/webapp/nodejs/index.js:1642:31
+      1  100.0%          LazyCompile: ~getPaymentServiceURL /home/isucon/isucari/webapp/nodejs/index.js:1655:36
+      1  100.0%            LazyCompile: ~getSettings /home/isucon/isucari/webapp/nodejs/index.js:1453:27
+    867    8.0%    LazyCompile: *stringSlice buffer.js:636:21
+    654   75.4%      LazyCompile: *readLengthCodedString /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:354:24
+    597   91.3%        LazyCompile: *TextRow :4:26
+    597  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+    597  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     57    8.7%        LazyCompile: ~TextRow :4:26
+     56   98.2%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+     56  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1    1.8%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    209   24.1%      LazyCompile: *toString buffer.js:690:46
+    156   74.6%        LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+    156  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    156  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+     52   24.9%        LazyCompile: *TextRow :4:26
+     52  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+     52  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    234    2.2%    v8::internal::Builtin_JsonStringify(int, unsigned long*, v8::internal::Isolate*)
+    118   50.4%      LazyCompile: *serialize /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/validation.js:124:20
+    118  100.0%        LazyCompile: ~preserializeHookEnd /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:254:30
+    118  100.0%          LazyCompile: ~preserializeHook /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:240:27
+    118  100.0%            LazyCompile: ~Reply.send /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:89:33
+    112   47.9%      LazyCompile: ~serialize /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/validation.js:124:20
+    112  100.0%        LazyCompile: ~preserializeHookEnd /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:254:30
+    112  100.0%          LazyCompile: ~preserializeHook /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:240:27
+    112  100.0%            LazyCompile: ~Reply.send /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:89:33
+      3    1.3%      LazyCompile: ~stringify /home/isucon/isucari/webapp/nodejs/node_modules/pino/lib/tools.js:345:20
+      3  100.0%        LazyCompile: ~asChindings /home/isucon/isucari/webapp/nodejs/node_modules/pino/lib/tools.js:124:22
+      3  100.0%          LazyCompile: ~child /home/isucon/isucari/webapp/nodejs/node_modules/pino/lib/proto.js:68:16
+      2   66.7%            LazyCompile: ~routeHandler /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/route.js:270:25
+      1   33.3%            LazyCompile: *routeHandler /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/route.js:270:25
+    217    2.0%    LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+    217  100.0%      LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    215   99.1%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    215  100.0%          LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+    205   95.3%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+     10    4.7%            LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+    202    1.9%    LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    182   90.1%      LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    182  100.0%        LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+    168   92.3%          LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+    168  100.0%            LazyCompile: *emit events.js:159:44
+     13    7.1%          LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+     12   92.3%            LazyCompile: *emit events.js:159:44
+      1    7.7%            LazyCompile: ~addChunk _stream_readable.js:302:18
+     10    5.0%      LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+      5   50.0%        LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+      5  100.0%          /home/isucon/local/node/bin/node
+      5  100.0%            /home/isucon/local/node/bin/node
+      3   30.0%        LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      3  100.0%          /home/isucon/local/node/bin/node
+      3  100.0%            /home/isucon/local/node/bin/node
+      2   20.0%        LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+      3    1.5%      LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+      3  100.0%        LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+      3  100.0%          LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+      3  100.0%            LazyCompile: ~addChunk _stream_readable.js:302:18
+    159    1.5%    LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+    156    1.4%    LazyCompile: *Socket._write net.js:709:35
+    156  100.0%      LazyCompile: *doWrite _stream_writable.js:418:17
+    156  100.0%        LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+    156  100.0%          LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+    156  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    147    1.4%    LazyCompile: *getTextParser /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/text_parser.js:199:23
+    147  100.0%      LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+    147  100.0%        LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    147  100.0%          LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    146   99.3%            LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+    145    1.3%    v8::internal::Builtin_DateConstructor(int, unsigned long*, v8::internal::Isolate*)
+     79   54.5%      LazyCompile: *parseDateTime /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:596:16
+     68   86.1%        LazyCompile: *TextRow :4:26
+     68  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+     68  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     11   13.9%        LazyCompile: ~TextRow :4:26
+     11  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+     11  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     59   40.7%      LazyCompile: *TextRow :4:26
+     59  100.0%        LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+     59  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     59  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+      5    3.4%      LazyCompile: ~TextRow :4:26
+      2   40.0%        LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+      2  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      2  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+      2   40.0%        LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      2  100.0%          LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+      2  100.0%            LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+      1   20.0%        LazyCompile: ~execute /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/command.js:22:10
+      1  100.0%          LazyCompile: ~handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1  100.0%            LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    121    1.1%    LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     47   38.8%      LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     47  100.0%        /home/isucon/local/node/bin/node
+     47  100.0%          /home/isucon/local/node/bin/node
+     47  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     27   22.3%      /home/isucon/local/node/bin/node
+     27  100.0%        /home/isucon/local/node/bin/node
+     27  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     23   19.0%      LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     23  100.0%        /home/isucon/local/node/bin/node
+     23  100.0%          /home/isucon/local/node/bin/node
+     23  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      5    4.1%      LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      5  100.0%        /home/isucon/local/node/bin/node
+      5  100.0%          /home/isucon/local/node/bin/node
+      5  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      5    4.1%      LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      5  100.0%        /home/isucon/local/node/bin/node
+      5  100.0%          /home/isucon/local/node/bin/node
+      5  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      5    4.1%      LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      5  100.0%        /home/isucon/local/node/bin/node
+      5  100.0%          /home/isucon/local/node/bin/node
+      5  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      3    2.5%      LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      3  100.0%        /home/isucon/local/node/bin/node
+      3  100.0%          /home/isucon/local/node/bin/node
+      3  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      3    2.5%      LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      3  100.0%        /home/isucon/local/node/bin/node
+      3  100.0%          LazyCompile: ~getTransactions /home/isucon/isucari/webapp/nodejs/index.js:321:31
+      3  100.0%            /home/isucon/local/node/bin/node
+    117    1.1%    v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+     58   49.6%      LazyCompile: *Socket._write net.js:709:35
+     57   98.3%        LazyCompile: *doWrite _stream_writable.js:418:17
+     57  100.0%          LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+     57  100.0%            LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      1    1.7%        LazyCompile: *Writable.write _stream_writable.js:275:36
+      1  100.0%          LazyCompile: ~_writeRaw _http_outgoing.js:276:19
+      1  100.0%            LazyCompile: ~_send _http_outgoing.js:243:49
+      7    6.0%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:107:23
+      7  100.0%        LazyCompile: *Socket._writeGeneric net.js:672:42
+      6   85.7%          LazyCompile: ~Socket._writev net.js:704:36
+      3   50.0%            LazyCompile: *doWrite _stream_writable.js:418:17
+      3   50.0%            LazyCompile: *Writable.uncork _stream_writable.js:312:37
+      1   14.3%          LazyCompile: ~connect net.js:679:42
+      1  100.0%            LazyCompile: *onceWrapper events.js:293:21
+      7    6.0%      LazyCompile: ~unrefActive internal/timers.js:297:21
+      5   71.4%        LazyCompile: ~Timeout.refresh internal/timers.js:192:37
+      2   40.0%          LazyCompile: *onStreamRead internal/stream_base_commons.js:155:22
+      2   40.0%          LazyCompile: *Socket._writeGeneric net.js:672:42
+      2  100.0%            LazyCompile: ~Socket._writev net.js:704:36
+      1   20.0%          LazyCompile: *_unrefTimer net.js:344:52
+      1  100.0%            LazyCompile: ~onParserExecute _http_server.js:527:25
+      2   28.6%        LazyCompile: ~setUnrefTimeout internal/timers.js:345:25
+      2  100.0%          LazyCompile: ~setStreamTimeout internal/stream_base_commons.js:202:26
+      1   50.0%            LazyCompile: ~connectionListenerInternal _http_server.js:362:36
+      1   50.0%            LazyCompile: *connectionListenerInternal _http_server.js:362:36
+      5    4.3%      LazyCompile: *Socket._writeGeneric net.js:672:42
+      5  100.0%        LazyCompile: ~Socket._write net.js:709:35
+      4   80.0%          LazyCompile: *doWrite _stream_writable.js:418:17
+      4  100.0%            LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+      1   20.0%          LazyCompile: *write /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:220:8
+      1  100.0%            LazyCompile: ~writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+      3    2.6%      LazyCompile: ~done _tls_wrap.js:470:16
+      3    2.6%      LazyCompile: *createWriteWrap internal/stream_base_commons.js:95:25
+      2   66.7%        LazyCompile: ~writevGeneric internal/stream_base_commons.js:107:23
+      2  100.0%          LazyCompile: *Socket._writeGeneric net.js:672:42
+      2  100.0%            LazyCompile: ~Socket._writev net.js:704:36
+      1   33.3%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:133:22
+      1  100.0%          LazyCompile: ~Socket._writeGeneric net.js:672:42
+      1  100.0%            LazyCompile: ~Socket._write net.js:709:35
+      2    1.7%      LazyCompile: ~socketOnEnd _http_server.js:498:21
+      2  100.0%        LazyCompile: *emit events.js:159:44
+      2  100.0%          LazyCompile: ~endReadableNT _stream_readable.js:1171:23
+      2  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      2    1.7%      LazyCompile: ~methodProxy _tls_wrap.js:451:30
+      2  100.0%        LazyCompile: ~internalConnect net.js:779:25
+      2  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:292:36
+      2  100.0%            LazyCompile: ~emitLookup net.js:958:46
+      2    1.7%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:36:24
+      2  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:133:22
+      2  100.0%          LazyCompile: ~Socket._writeGeneric net.js:672:42
+      2  100.0%            LazyCompile: ~Socket._write net.js:709:35
+      2    1.7%      LazyCompile: ~freeParser _http_common.js:180:20
+      2  100.0%        LazyCompile: ~socketOnClose _http_server.js:478:23
+      1   50.0%          LazyCompile: *emit events.js:159:44
+      1  100.0%            LazyCompile: ~<anonymous> net.js:586:24
+      1   50.0%          LazyCompile: *<anonymous> net.js:586:24
+      2    1.7%      LazyCompile: ~createWriteWrap internal/stream_base_commons.js:95:25
+      2  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:133:22
+      2  100.0%          LazyCompile: ~Socket._writeGeneric net.js:672:42
+      2  100.0%            LazyCompile: ~Socket._write net.js:709:35
+      2    1.7%      LazyCompile: ~TLSSocket._wrapHandle _tls_wrap.js:493:43
+      2  100.0%        LazyCompile: ~TLSSocket _tls_wrap.js:360:19
+      2  100.0%          LazyCompile: ~connect _tls_wrap.js:1371:35
+      2  100.0%            LazyCompile: ~createConnection https.js:95:26
+      2    1.7%      LazyCompile: ~Socket._final net.js:354:35
+      2  100.0%        LazyCompile: ~callFinal _stream_writable.js:617:19
+      2  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      2    1.7%      LazyCompile: ~Socket._destroy net.js:566:37
+      2  100.0%        LazyCompile: ~destroy internal/streams/destroy.js:4:17
+      2  100.0%          LazyCompile: ~onReadableStreamEnd net.js:543:29
+      1   50.0%            LazyCompile: *endReadableNT _stream_readable.js:1171:23
+      1   50.0%            LazyCompile: *emit events.js:159:44
+      2    1.7%      LazyCompile: *onconnection net.js:1444:22
+      2    1.7%      LazyCompile: *fromString buffer.js:379:20
+      2  100.0%        LazyCompile: ~exports.encode /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/string.js:18:26
+      2  100.0%          LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      2  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      2    1.7%      LazyCompile: *Socket._read net.js:518:34
+      2  100.0%        LazyCompile: *Readable.read _stream_readable.js:396:35
+      1   50.0%          LazyCompile: *onconnection net.js:1444:22
+      1   50.0%          LazyCompile: *Socket net.js:236:16
+      1  100.0%            LazyCompile: *onconnection net.js:1444:22
+      2    1.7%      LazyCompile: *Socket._final net.js:354:35
+      2  100.0%        LazyCompile: ~callFinal _stream_writable.js:617:19
+      2  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+    116    1.1%    LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+    116  100.0%      LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    116  100.0%        LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+    116  100.0%          LazyCompile: *executeStart /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:63:15
+    110   94.8%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+      4    3.4%            LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:74:28
+      2    1.7%            LazyCompile: ~executePayload /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packet_parser.js:120:17
+
+   7835   23.7%  __libc_write
+   6882   87.8%    LazyCompile: *Socket._write net.js:709:35
+   6882  100.0%      LazyCompile: *doWrite _stream_writable.js:418:17
+   6882  100.0%        LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+   6882  100.0%          LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+   6882  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+    938   12.0%    LazyCompile: *Socket._writeGeneric net.js:672:42
+    938  100.0%      LazyCompile: ~Socket._write net.js:709:35
+    884   94.2%        LazyCompile: *doWrite _stream_writable.js:418:17
+    884  100.0%          LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+    884  100.0%            LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+     46    4.9%        LazyCompile: ~doWrite _stream_writable.js:418:17
+     45   97.8%          LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+     45  100.0%            LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      1    2.2%          LazyCompile: ~clearBuffer _stream_writable.js:501:21
+      1  100.0%            LazyCompile: ~Writable.uncork _stream_writable.js:312:37
+
+   6196   18.7%  epoll_pwait
+
+    613    1.9%  __libc_read
+
+    352    1.1%  void node::StreamBase::JSMethod<&node::StreamBase::Writev>(v8::FunctionCallbackInfo<v8::Value> const&)
+    352  100.0%    v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+    352  100.0%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:107:23
+    327   92.9%        LazyCompile: *Socket._writeGeneric net.js:672:42
+    309   94.5%          LazyCompile: ~Socket._writev net.js:704:36
+    134   43.4%            LazyCompile: *Writable.uncork _stream_writable.js:312:37
+    122   39.5%            LazyCompile: *doWrite _stream_writable.js:418:17
+     45   14.6%            RegExp: v(\d+)
+      8    2.6%            LazyCompile: ~doWrite _stream_writable.js:418:17
+     18    5.5%          LazyCompile: ~connect net.js:679:42
+     11   61.1%            LazyCompile: ~onceWrapper events.js:293:21
+      7   38.9%            LazyCompile: *onceWrapper events.js:293:21
+     25    7.1%        LazyCompile: ~Socket._writeGeneric net.js:672:42
+     24   96.0%          LazyCompile: ~Socket._writev net.js:704:36
+     24  100.0%            LazyCompile: ~doWrite _stream_writable.js:418:17
+      1    4.0%          LazyCompile: ~connect net.js:679:42
+      1  100.0%            LazyCompile: ~onceWrapper events.js:293:21
+
+    343    1.0%  /lib/x86_64-linux-gnu/libc-2.27.so
+     79   23.0%    v8::internal::Builtin_ErrorConstructor(int, unsigned long*, v8::internal::Isolate*)
+     51   64.6%      LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     28   54.9%        LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+     28  100.0%          /home/isucon/local/node/bin/node
+     28  100.0%            /home/isucon/local/node/bin/node
+     14   27.5%        LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     14  100.0%          /home/isucon/local/node/bin/node
+     14  100.0%            /home/isucon/local/node/bin/node
+      5    9.8%        LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      5  100.0%          /home/isucon/local/node/bin/node
+      5  100.0%            /home/isucon/local/node/bin/node
+      2    3.9%        LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+      1    2.0%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    2.0%        LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+     18   22.8%      LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+     14   77.8%        LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+     14  100.0%          /home/isucon/local/node/bin/node
+     14  100.0%            /home/isucon/local/node/bin/node
+      2   11.1%        LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            /home/isucon/local/node/bin/node
+      1    5.6%        LazyCompile: ~getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    5.6%        LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      5    6.3%      LazyCompile: *query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+      1   20.0%        LazyCompile: ~postShipDone /home/isucon/isucari/webapp/nodejs/index.js:1061:28
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1   20.0%        LazyCompile: ~getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+      1  100.0%          LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%            /home/isucon/local/node/bin/node
+      1   20.0%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1   20.0%        LazyCompile: ~getConfigByName /home/isucon/isucari/webapp/nodejs/index.js:1642:31
+      1  100.0%          LazyCompile: ~getShipmentServiceURL /home/isucon/isucari/webapp/nodejs/index.js:1662:37
+      1  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      1   20.0%        LazyCompile: *getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      2    2.5%      LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      2  100.0%        /home/isucon/local/node/bin/node
+      2  100.0%          /home/isucon/local/node/bin/node
+      2  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1    1.3%      LazyCompile: ~query /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:90:8
+      1  100.0%        LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/index.js:384:33
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    1.3%      LazyCompile: ~commit /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/promise.js:131:9
+      1  100.0%        LazyCompile: ~postComplete /home/isucon/isucari/webapp/nodejs/index.js:1188:28
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    1.3%      LazyCompile: *getLoginUser /home/isucon/isucari/webapp/nodejs/index.js:1568:28
+      1  100.0%        LazyCompile: ~getItem /home/isucon/isucari/webapp/nodejs/index.js:572:23
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+     71   20.7%    /home/isucon/local/node/bin/node
+     35   49.3%      LazyCompile: *getTextParser /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/text_parser.js:199:23
+     35  100.0%        LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+     35  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     35  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+      7    9.9%      LazyCompile: ~preserializeHookEnd /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:254:30
+      7  100.0%        LazyCompile: ~preserializeHook /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:240:27
+      7  100.0%          LazyCompile: ~Reply.send /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:89:33
+      4   57.1%            LazyCompile: *getNewCategoryItems /home/isucon/isucari/webapp/nodejs/index.js:212:35
+      1   14.3%            LazyCompile: ~getUserItems /home/isucon/isucari/webapp/nodejs/index.js:473:28
+      1   14.3%            LazyCompile: ~getTransactions /home/isucon/isucari/webapp/nodejs/index.js:321:31
+      1   14.3%            LazyCompile: ~getSettings /home/isucon/isucari/webapp/nodejs/index.js:1453:27
+      6    8.5%      /home/isucon/local/node/bin/node
+      2   33.3%        LazyCompile: ~stat internal/modules/cjs/loader.js:112:14
+      2  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:450:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:717:35
+      2   33.3%        LazyCompile: ~createSecureContext _tls_common.js:91:59
+      2  100.0%          LazyCompile: *connect _tls_wrap.js:1371:35
+      2  100.0%            LazyCompile: ~createConnection https.js:95:26
+      1   16.7%        LazyCompile: ~TLSSocket _tls_wrap.js:360:19
+      1  100.0%          LazyCompile: ~connect _tls_wrap.js:1371:35
+      1  100.0%            LazyCompile: ~createConnection https.js:95:26
+      1   16.7%        /home/isucon/local/node/bin/node
+      1  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      2    2.8%      LazyCompile: *_copy buffer.js:170:15
+      2  100.0%        LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      2  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1   50.0%            LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+      1   50.0%            LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+      1    1.4%      RegExp: [ ,]+
+      1  100.0%        LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+      1  100.0%          LazyCompile: ~getNewItems /home/isucon/isucari/webapp/nodejs/index.js:127:27
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    1.4%      LazyCompile: ~wrappedProtocol.request /home/isucon/isucari/webapp/nodejs/node_modules/follow-redirects/index.js:292:40
+      1  100.0%        LazyCompile: ~dispatchHttpRequest /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/adapters/http.js:20:50
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            LazyCompile: ~httpAdapter /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/adapters/http.js:19:38
+      1    1.4%      LazyCompile: ~set /home/isucon/isucari/webapp/nodejs/node_modules/tiny-lru/lib/tiny-lru.js:95:7
+      1  100.0%        LazyCompile: ~ContentTypeParser.getParser /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/contentTypeParser.js:77:50
+      1  100.0%          LazyCompile: ~ContentTypeParser.run /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/contentTypeParser.js:89:44
+      1  100.0%            LazyCompile: ~handleRequest /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/handleRequest.js:8:24
+      1    1.4%      LazyCompile: ~sanitizeUrl /home/isucon/isucari/webapp/nodejs/node_modules/find-my-way/index.js:546:22
+      1  100.0%        LazyCompile: ~lookup /home/isucon/isucari/webapp/nodejs/node_modules/find-my-way/index.js:334:43
+      1  100.0%          LazyCompile: *emit events.js:159:44
+      1  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:676:26
+      1    1.4%      LazyCompile: ~preHandlerCallback /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/handleRequest.js:105:29
+      1  100.0%        LazyCompile: ~preValidationCallback /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/handleRequest.js:74:32
+      1  100.0%          LazyCompile: ~next /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/hooks.js:64:17
+      1  100.0%            LazyCompile: ~attachToBody /home/isucon/isucari/webapp/nodejs/node_modules/fastify-multipart/index.js:16:23
+      1    1.4%      LazyCompile: ~parserOnIncoming _http_server.js:676:26
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete _http_common.js:70:33
+      1    1.4%      LazyCompile: ~onStreamRead internal/stream_base_commons.js:155:22
+      1    1.4%      LazyCompile: ~getTransactions /home/isucon/isucari/webapp/nodejs/index.js:321:31
+      1  100.0%        /home/isucon/local/node/bin/node
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1    1.4%      LazyCompile: ~connect _tls_wrap.js:1371:35
+      1  100.0%        LazyCompile: ~createConnection https.js:95:26
+      1  100.0%          LazyCompile: ~createSocket _http_agent.js:204:53
+      1  100.0%            LazyCompile: ~addRequest _http_agent.js:146:49
+      1    1.4%      LazyCompile: ~WeakMap /home/isucon/isucari/webapp/nodejs/node_modules/weakmap/weakmap.js:138:21
+      1  100.0%        Eval: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/trace-error/dist/Exception.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:846:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:945:37
+      1    1.4%      LazyCompile: ~Reply.send /home/isucon/isucari/webapp/nodejs/node_modules/fastify/lib/reply.js:89:33
+      1  100.0%        LazyCompile: ~getUserItems /home/isucon/isucari/webapp/nodejs/index.js:473:28
+      1  100.0%          /home/isucon/local/node/bin/node
+      1  100.0%            /home/isucon/local/node/bin/node
+      1    1.4%      LazyCompile: ~ClientRequest _http_client.js:76:23
+      1  100.0%        LazyCompile: ~request https.js:276:17
+      1  100.0%          LazyCompile: ~RedirectableRequest._performRequest /home/isucon/isucari/webapp/nodejs/node_modules/follow-redirects/index.js:151:58
+      1  100.0%            LazyCompile: ~RedirectableRequest /home/isucon/isucari/webapp/nodejs/node_modules/follow-redirects/index.js:21:29
+      1    1.4%      LazyCompile: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/follow-redirects/index.js:116:45
+      1  100.0%        LazyCompile: *onCorkedFinish _stream_writable.js:675:24
+      1  100.0%          LazyCompile: *afterWrite _stream_writable.js:490:20
+      1  100.0%            LazyCompile: *onwrite _stream_writable.js:456:17
+      1    1.4%      LazyCompile: *toPacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/query.js:15:11
+      1  100.0%        LazyCompile: ~start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      1  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1    1.4%      LazyCompile: *realpathSync fs.js:1431:22
+      1  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:327:20
+      1  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:319:17
+      1  100.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:273:20
+      1    1.4%      LazyCompile: *onStreamRead internal/stream_base_commons.js:155:22
+      1    1.4%      LazyCompile: *emit events.js:159:44
+      1  100.0%        LazyCompile: *readableAddChunk _stream_readable.js:228:26
+      1  100.0%          LazyCompile: *onStreamRead internal/stream_base_commons.js:155:22
+      1    1.4%      LazyCompile: *doWrite _stream_writable.js:418:17
+      1  100.0%        LazyCompile: *writePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:249:14
+      1  100.0%          LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      1  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1    1.4%      LazyCompile: *_addHeaderLines _http_incoming.js:111:25
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete _http_common.js:70:33
+      1  100.0%          node::(anonymous namespace)::Parser::Execute(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~socketOnData _http_client.js:449:22
+      1    1.4%      Eval: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/constants/errors.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:846:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:945:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:782:33
+      1    1.4%      Eval: ~<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/defaults.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:846:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:945:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:782:33
+     17    5.0%    LazyCompile: *stringSlice buffer.js:636:21
+     14   82.4%      LazyCompile: *toString buffer.js:690:46
+     12   85.7%        LazyCompile: *readField /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:180:12
+     12  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     12  100.0%            LazyCompile: *<anonymous> /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:71:42
+      1    7.1%        LazyCompile: ~onData /home/isucon/isucari/webapp/nodejs/node_modules/busboy/lib/types/multipart.js:248:26
+      1  100.0%          LazyCompile: *emit events.js:159:44
+      1  100.0%            LazyCompile: *readableAddChunk _stream_readable.js:228:26
+      1    7.1%        LazyCompile: ~handleStreamEnd /home/isucon/isucari/webapp/nodejs/node_modules/axios/lib/adapters/http.js:230:50
+      1  100.0%          LazyCompile: *emit events.js:159:44
+      1  100.0%            LazyCompile: ~endReadableNT _stream_readable.js:1171:23
+      2   11.8%      LazyCompile: *parseDateTime /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:596:16
+      1   50.0%        LazyCompile: ~TextRow :4:26
+      1  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+      1  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1   50.0%        LazyCompile: *TextRow :4:26
+      1  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+      1  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1    5.9%      LazyCompile: *readLengthCodedString /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/packets/packet.js:354:24
+      1  100.0%        LazyCompile: *TextRow :4:26
+      1  100.0%          LazyCompile: *row /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:219:6
+      1  100.0%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+     11    3.2%    LazyCompile: *write buffer.js:952:40
+     11  100.0%      LazyCompile: *exports.encode /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/string.js:18:26
+     11  100.0%        LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+     11  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      8   72.7%            LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+      2   18.2%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      1    9.1%            LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+      9    2.6%    LazyCompile: *byteLength buffer.js:556:20
+      9  100.0%      LazyCompile: *exports.encode /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/parsers/string.js:18:26
+      9  100.0%        LazyCompile: *start /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/commands/query.js:44:8
+      9  100.0%          LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      5   55.6%            LazyCompile: *getCategoryByID /home/isucon/isucari/webapp/nodejs/index.js:1604:31
+      2   22.2%            LazyCompile: *handlePacket /home/isucon/isucari/webapp/nodejs/node_modules/mysql2/lib/connection.js:388:15
+      2   22.2%            LazyCompile: *getUserSimpleByID /home/isucon/isucari/webapp/nodejs/index.js:1591:33
+

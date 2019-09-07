@@ -600,11 +600,9 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
                 TransactionsPerPage + 1,
             ]
         );
-
-        for (const row of rows) {
+        rows.forEach((row) => {
             items.push(row as Item);
-        }
-
+        });
     } else {
         const [rows] = await db.query(
             "SELECT * FROM `items` WHERE (`seller_id` = ? OR `buyer_id` = ?) AND `status` IN (?,?,?,?,?) ORDER BY `created_at` DESC, `id` DESC LIMIT ?",
@@ -619,99 +617,101 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
                 TransactionsPerPage + 1
             ]
         );
-
-        for (const row of rows) {
+        rows.forEach((row) => {
             items.push(row as Item);
-        }
+        });
     }
 
     let itemDetails: ItemDetail[] = [];
-    for (const item of items) {
-        const category = await getCategoryByID(db, item.category_id);
-        if (category === null) {
-            replyError(reply, "category not found", 404)
-            await db.rollback();
-            await db.release();
-            return;
-        }
 
-        const seller = await getUserSimpleByID(db, item.seller_id);
-        if (seller === null) {
-            replyError(reply, "seller not found", 404)
-            await db.rollback();
-            await db.release();
-            return;
-        }
-
-        const itemDetail: ItemDetail = {
-            id: item.id,
-            seller_id: item.seller_id,
-            seller: seller,
-            // buyer_id
-            // buyer
-            status: item.status,
-            name: item.name,
-            price: item.price,
-            description: item.description,
-            image_url: getImageURL(item.image_name),
-            category_id: item.category_id,
-            category: category,
-            // transaction_evidence_id
-            // transaction_evidence_status
-            // shipping_status
-            created_at: item.created_at.getTime(),
-        };
-
-        if (item.buyer_id !== undefined && item.buyer_id !== 0) {
-            const buyer = await getUserSimpleByID(db, item.buyer_id);
-            if (buyer === null) {
-                replyError(reply, "buyer not found", 404);
+    await Promise.all(
+        items.map(async (item) => {
+            const category = await getCategoryByID(db, item.category_id);
+            if (category === null) {
+                replyError(reply, "category not found", 404)
                 await db.rollback();
                 await db.release();
                 return;
             }
-            itemDetail.buyer_id = item.buyer_id;
-            itemDetail.buyer = buyer;
-        }
 
-        const [rows] = await db.query("SELECT * FROM `transaction_evidences` WHERE `item_id` = ?", [item.id]);
-        let transactionEvidence: TransactionEvidence | null = null;
-        for (const row of rows) {
-            transactionEvidence = row as TransactionEvidence;
-        }
+            const seller = await getUserSimpleByID(db, item.seller_id);
+            if (seller === null) {
+                replyError(reply, "seller not found", 404)
+                await db.rollback();
+                await db.release();
+                return;
+            }
 
-        if (transactionEvidence !== null) {
-            const [rows] = await db.query("SELECT * FROM `shippings` WHERE `transaction_evidence_id` = ?", [transactionEvidence.id]);
+            const itemDetail: ItemDetail = {
+                id: item.id,
+                seller_id: item.seller_id,
+                seller: seller,
+                // buyer_id
+                // buyer
+                status: item.status,
+                name: item.name,
+                price: item.price,
+                description: item.description,
+                image_url: getImageURL(item.image_name),
+                category_id: item.category_id,
+                category: category,
+                // transaction_evidence_id
+                // transaction_evidence_status
+                // shipping_status
+                created_at: item.created_at.getTime(),
+            };
 
-            let shipping: Shipping | null = null;
+            if (item.buyer_id !== undefined && item.buyer_id !== 0) {
+                const buyer = await getUserSimpleByID(db, item.buyer_id);
+                if (buyer === null) {
+                    replyError(reply, "buyer not found", 404);
+                    await db.rollback();
+                    await db.release();
+                    return;
+                }
+                itemDetail.buyer_id = item.buyer_id;
+                itemDetail.buyer = buyer;
+            }
+
+            const [rows] = await db.query("SELECT * FROM `transaction_evidences` WHERE `item_id` = ?", [item.id]);
+            let transactionEvidence: TransactionEvidence | null = null;
             for (const row of rows) {
-                shipping = row as Shipping;
+                transactionEvidence = row as TransactionEvidence;
             }
 
-            if (shipping === null) {
-                replyError(reply, "shipping not found", 404);
-                await db.rollback();
-                await db.release();
-                return;
+            if (transactionEvidence !== null) {
+                const [rows] = await db.query("SELECT * FROM `shippings` WHERE `transaction_evidence_id` = ?", [transactionEvidence.id]);
+
+                let shipping: Shipping | null = null;
+                for (const row of rows) {
+                    shipping = row as Shipping;
+                }
+
+                if (shipping === null) {
+                    replyError(reply, "shipping not found", 404);
+                    await db.rollback();
+                    await db.release();
+                    return;
+                }
+
+                try {
+                    const res = await shipmentStatus(await getShipmentServiceURL(db), {reserve_id: shipping.reserve_id});
+                    itemDetail.shipping_status = res.status;
+                } catch (error) {
+                    replyError(reply, "failed to request to shipment service");
+                    await db.rollback();
+                    await db.release();
+                    return;
+                }
+
+                itemDetail.transaction_evidence_id = transactionEvidence.id;
+                itemDetail.transaction_evidence_status = transactionEvidence.status;
             }
 
-            try {
-                const res = await shipmentStatus(await getShipmentServiceURL(db), {reserve_id: shipping.reserve_id});
-                itemDetail.shipping_status = res.status;
-            } catch (error) {
-                replyError(reply, "failed to request to shipment service");
-                await db.rollback();
-                await db.release();
-                return;
-            }
+            itemDetails.push(itemDetail);
 
-            itemDetail.transaction_evidence_id = transactionEvidence.id;
-            itemDetail.transaction_evidence_status = transactionEvidence.status;
-        }
-
-        itemDetails.push(itemDetail);
-
-    }
+        })
+    );
 
     await db.commit();
 
@@ -783,9 +783,9 @@ async function getUserItems(req: FastifyRequest, reply: FastifyReply<ServerRespo
             ]
         );
 
-        for (const row of rows) {
-            items.push(row as Item);
-        }
+        rows.forEach((row) => {
+           items.push(row as Item)
+        });
     } else {
         const [rows] = await db.query(
             "SELECT * FROM `items` WHERE `seller_id` = ? AND `status` IN (?,?,?) ORDER BY `created_at` DESC, `id` DESC LIMIT ?",
@@ -798,33 +798,35 @@ async function getUserItems(req: FastifyRequest, reply: FastifyReply<ServerRespo
             ]
         );
 
-        for (const row of rows) {
-            items.push(row as Item);
-        }
+        rows.forEach((row) => {
+            items.push(row as Item)
+        });
     }
 
     let itemSimples: ItemSimple[] = [];
-    for (const item of items) {
-        const category = await getCategoryByID(db, item.category_id);
-        if (category === null) {
-            replyError(reply, "category not found", 404)
-            await db.release();
-            return;
-        }
+    await Promise.all(
+      items.map(async (item) => {
+          const category = await getCategoryByID(db, item.category_id);
+          if (category === null) {
+              replyError(reply, "category not found", 404)
+              await db.release();
+              return;
+          }
 
-        itemSimples.push({
-            id: item.id,
-            seller_id: item.seller_id,
-            seller: userSimple,
-            status: item.status,
-            name: item.name,
-            price: item.price,
-            image_url: getImageURL(item.image_name),
-            category_id: item.category_id,
-            category: category,
-            created_at: item.created_at.getTime(),
-        });
-    }
+          itemSimples.push({
+              id: item.id,
+              seller_id: item.seller_id,
+              seller: userSimple,
+              status: item.status,
+              name: item.name,
+              price: item.price,
+              image_url: getImageURL(item.image_name),
+              category_id: item.category_id,
+              category: category,
+              created_at: item.created_at.getTime(),
+          });
+      })
+    );
 
     let hasNext = false;
     if (itemSimples.length > ItemsPerPage) {

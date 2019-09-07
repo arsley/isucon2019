@@ -8,7 +8,8 @@
     "start": "ts-node --files ./index.ts",
     "dev": "ts-node-dev --files ./index.ts",
     "test": "tsc --noEmit",
-    "update-dependencies": "rm -rf node_modules && npm install && npm dedupe"
+    "update-dependencies": "rm -rf node_modules && npm install && npm dedupe",
+    "build": "tsc -b tsconfig.json"
   },
   "engines": {
     "node": ">= 12.9.0"
@@ -22,6 +23,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/bcrypt": "^3.0.0",
+    "@types/busboy": "^0.2.3",
     "@types/node": "^12",
     "axios": "^0.19.0",
     "bcrypt": "^3.0.6",

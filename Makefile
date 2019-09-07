@@ -14,7 +14,7 @@ build-app:
 up-app:
 	docker-compose up -d webapp
 
-up: up-db init-app up-app
+up: up-db init-app build-app up-app
 
 down:
 	docker-compose down

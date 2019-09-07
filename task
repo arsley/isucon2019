@@ -5,7 +5,7 @@ function kataribe () {
 }
 
 function slowquery () {
-    mysqldumpslow -s t -t 5 /var/log/mysql/slow-query.log
+    mysqldumpslow -s t -t 5 /var/log/mysql/slow_query.log
 }
 
 function clearlog () {

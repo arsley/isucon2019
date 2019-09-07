@@ -581,7 +581,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
         }
     }
 
-    await db.beginTransaction();
     const items: Item[] = [];
     if (itemId > 0 && createdAt > 0) {
         const [rows] = await db.query(
@@ -629,7 +628,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
             const category = await getCategoryByID(db, item.category_id);
             if (category === null) {
                 replyError(reply, "category not found", 404)
-                await db.rollback();
                 await db.release();
                 return;
             }
@@ -637,7 +635,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
             const seller = await getUserSimpleByID(db, item.seller_id);
             if (seller === null) {
                 replyError(reply, "seller not found", 404)
-                await db.rollback();
                 await db.release();
                 return;
             }
@@ -665,7 +662,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
                 const buyer = await getUserSimpleByID(db, item.buyer_id);
                 if (buyer === null) {
                     replyError(reply, "buyer not found", 404);
-                    await db.rollback();
                     await db.release();
                     return;
                 }
@@ -689,7 +685,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
 
                 if (shipping === null) {
                     replyError(reply, "shipping not found", 404);
-                    await db.rollback();
                     await db.release();
                     return;
                 }
@@ -699,7 +694,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
                     itemDetail.shipping_status = res.status;
                 } catch (error) {
                     replyError(reply, "failed to request to shipment service");
-                    await db.rollback();
                     await db.release();
                     return;
                 }
@@ -713,8 +707,6 @@ async function getTransactions(req: FastifyRequest, reply: FastifyReply<ServerRe
         })
     );
     itemDetails.sort((a, b) => b.created_at - a.created_at);
-
-    await db.commit();
 
     let hasNext = false;
     if (itemDetails.length > TransactionsPerPage) {

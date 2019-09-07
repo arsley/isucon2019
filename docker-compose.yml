@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  db:
+    image: mysql/mysql-server:5.7
+    volumes:
+      - ./sql:/sql
+    env_file: .env
+
+  webapp:
+    image: arsley/isucon_for_node
+    build: nodejs
+    volumes:
+      - ./nodejs:/webapp
+      - ./public:/public
+    ports:
+      - 8000:8000
+    environment:
+      NODE_ENV: development
+    env_file: .env
+    stdin_open: true
+    tty: true
+    links:
+      - db

@@ -2134,7 +2134,7 @@ async function getLoginUser(req: FastifyRequest, db: MySQLQueryable): Promise<Us
 function getSession(req: FastifyRequest) {
 }
 
-fastify.listen(8000, (err, _address) => {
+fastify.listen(8000, '0.0.0.0', (err, _address) => {
     if (err) {
         throw new TraceError("Failed to listening", err);
     }

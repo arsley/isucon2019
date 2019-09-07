@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function kataribe () {
+    cat /var/log/nginx/access.log | ./kataribe
+}
+
+function slowquery () {
+    mysqldumpslow -s t -t 5 /var/log/mysql/slow-query.log
+}
+
+function clearlog () {
+    cp /dev/null /var/log/nginx/access.log
+    cp /dev/null /var/log/mysql/mysql-slow.log
+}
+
+case $1 in
+    "kataribe" ) kataribe ;;
+    "slowquery" ) slowquery ;;
+    "clearlog" ) clearlog ;;
+esac

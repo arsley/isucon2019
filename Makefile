@@ -4,13 +4,13 @@ install-netdata:
 	bash <(curl -Ss https://my-netdata.io/kickstart-static64.sh) --dont-wait --no-updates
 
 install-kataribe:
-	cd /tmp
 	wget -O kataribe.zip https://github.com/matsuu/kataribe/releases/download/v0.4.1/kataribe-v0.4.1_linux_amd64.zip
 	unzip kataribe.zip
+	./kataribe -generate
 
 install-slowquery:
+	mysql -uroot -e "SET GLOBAL slow_query_log = 1;"
 	mysql -uroot -e "SET GLOBAL slow_query_log_file = '/var/log/mysql/slow_query.log';"
-	mkdir /var/log/mysql
 	touch /var/log/mysql/slow_query.log
 	chown mysql.mysql -R /var/log/mysql
 
@@ -25,7 +25,7 @@ install-passenger:
 # shortcut commands
 
 kataribe:
-	cat /var/log/nginx/access.log | kataribe/kataribe -f kataribe/kataribe.toml
+	cat /var/log/nginx/access.log | ./kataribe
 
 slowquery:
 	mysqldumpslow -s t -t 5 /var/log/mysql/mysql-slow.log
